@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Amor - 1 Ano</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #5a2a5a;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f8cdda, #ff9a9e);
+      text-align: center;
+      padding: 4rem 2rem;
+      color: white;
+      position: relative;
+    }
+    .carta>p{
+        text-align: justify;
+        text-indent: 15px;
+    }
+
+    .typing {
+      font-size: 1.2rem;
+      height: 1.5em;
+      overflow: hidden;
+      border-right: .15em solid white;
+      white-space: nowrap;
+      animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+      margin-top: 1rem;
+    }
+
+    .decoracao {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      animation: flutuar 2.5s ease-in-out infinite;
+    }
+
+    @keyframes flutuar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .gallery img {
+      width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .carta {
+      background: #ffe4e1;
+      margin: 2rem;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      
+    }
+
+    .carta h2 {
+      margin-top: 0;
+      color: #d63384;
+    }
+
+    .timeline {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .timeline-item {
+      background: #fff0f5;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: 5px solid #d63384;
+      border-radius: 8px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .surpresa {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    .surpresa button {
+      background: #d63384;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .surpresa button:hover {
+      background: #b0246b;
+    }
+
+    .mensagem {
+      margin-top: 1rem;
+      display: none;
+      font-size: 1.1rem;
+      color: #5a2a5a;
+    }
+
+    .slideshow {
+      position: relative;
+      max-width: 300px;
+      margin: 2rem auto;
+    }
+
+    .slides {
+      display: none;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .contador-dias {
+      background: #ffd6e8;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 400px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      color: #b0246b;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      background: #ff9a9e;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+        .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+        }
+
+
+      }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="decoracao">💫</div>
+    <h1>1 Ano do Nosso Amor 💖</h1>
+    <p class="typing">Ao seu lado, cada dia é o mais bonito da minha vida.</p>
+  </header>
+
+  <section class="gallery">
+    <img src="IMG-20240528-WA0053.jpg" alt="Foto 1" />
+    <img src="IMG-20241216-WA0079.jpg" alt="Foto 2" />
+    <img src="IMG-20241216-WA0099.jpg" alt="Foto 3" />
+    <img src="IMG-20241216-WA0108.jpg" alt="Foto 4" />
+  </section>
+
+  <section class="contador-dias">
+    <h2>Quantos dias estamos juntos?</h2>
+    <p id="diasJuntos">0 dias juntos 💖</p>
+  </section>
+
+  <section class="carta">
+    <h2>Minha Declaração ❤️</h2>
+      <p>27 de maio de 2024, um dia que ficará marcado para sempre em minha memória, como o dia da melhor decisão da minha vida, o dia do início do nosso relacionamento, o dia que virou toda a minha historia, que mudou a minha vida, o dia que Deus predestinou para mim o meu maior presente, hoje completa uma no desse dia e desde de lá ate hoje eu peço a Deus que não tire você da minha vida, na verdade tenho certeza que ele não vai tirar porque aquilo que o Senhor une ninguém separa. </p>
+        <p>Desculpe por não expressar as vezes em palavras o meu amor por você  , as vezes eu tento mas é tanto amor que eu não consigo descrever em palavras, muito menos dizer, me desculpe por esse meu jeito, mas eu quero que você saiba que euu te amoooooo muito e que já não consigo viver sem você, amor você me completa sem o seu amor eu so seria um frasco vazio, desde de o momento que você entrou na minha vida foi como se meu coração não pertencesse mais a mim e não depende so de mim, mas ele começou a ser dependente do seu amor para se mover bem, quando você entrou me mostrou o verdadeiro significado do amor, uma coisa que eu achava que não era para mim e de repente tudo muda, você aparece na minha frente e eu simplesmente me apaixono. Foi tão do nada que não da para acreditar, mas esse momento que do nada apareceu me tornou o homem mais feliz do mundo, tendo a namorada mais bonita, mais carinhosa, mais cuidadosa, mais protetora , mais ciumenta. </p>
+        <p>
+            Só quero que você saiba que você será a mãe dos meus filhos, você será a pessoa que todo dia quero que acorde ao meu lado, até por que você não imagina o quão eu te acho incrível, uma mulher incrivelmente forte que mesmo em momentos difíceis fica de pé, eu vejo que você não se reconhece o como você é incrível, mas eu estou ao seu lado seu fã numero um, para todo momento enaltecer essa mulher incrível que tenho a meu lado.
+        </p>
+        <p>
+            Conversar com você é a melhor parte do meu dia, eu fico contando os dias para quando a gente cai se ver, é como se o tempo que ficamos longe um do outro o meu coração fica incompleto e triste, e somente quando estamos juntos ele se completa automaticamente, isso resume o  amor que eu sinto por você. O seu jeito me pegou de uma maneira que me tornou dependente de você, e a cada dia que passa essa força de atração se torna mais forte que é difícil de explicar, mas isso pouco importa pois eu só quero passar o resto da vida ao seu lado.  
+        </p>
+        <p>
+            As lembranças do nosso inicio, de como eramos envergonhados quando nos conhecemos e ate hilario pensar que um dia já fomos daquele jeito e hoje somos fortimentes ligados, mas o começo foi muito importante para mim, por que foi daquelas nossas imensas conversas e momentos juntos na escola que pouco a pouco comecei a amar você e ficar com você se tornou o momento que mais esperava no dia.    
+        </p>
+        <p>    
+            Nesse um ano eu tive os melhores momentos da minha vida e todos foram quando eu estava ao seu lado, momentos de felicidade, risadas, momentos inesquecíveis, que ficaram para sempre em minha memoria. As vezes eu penso se mereço ter uma pessoa tão incrível ao meu lado  que sempre me apoia em tudo, que me anima em momentos de tristeza, que me ama de uma maneira tão grandiosa, Amor você é a melhor namorada do mundo   e eu te amooooooooooooooooooooooooooooooooooooooo muito muito muito e com toda certeza será a melhor esposa e melhor mãe, quero agradecer por ser essa pessoa incrível que completa a minha vida e p meu coração. Que esse seja o primeiro ano de muitos que virão por vir e que Deus nos abençoe. Saiba que você é o meu mundo e sem você já não sei mais como viver.
+        </p>
+
+    
+  </section>
+  <section class="carta">
+  <h2>Promessas para o Futuro 💍</h2>
+  <ul style="padding-left: 1.2rem;">
+    <li>Prometo continuar te fazendo sorrir todos os dias.</li>
+    <li>Prometo estar ao seu lado em cada desafio e conquista.</li>
+    <li>Prometo nunca deixar de dizer o quanto eu te amo.</li>
+    <li>Prometo construir com você um futuro cheio de amor, respeito e aventuras.</li>
+    <li>Prometo ser sempre seu porto seguro</li>
+    <li>Prometo ser o melhor namorado e ser o melhor conjuge</li>
+    <li>Prometo lhe torna a mulher mais feliz do mundo</li>
+  </ul>
+</section>
+
+
+  <section class="timeline">
+    <div class="timeline-item">
+      <strong>11/03/2024:</strong> Começamos a converar 💑
+    </div>
+    <div class="timeline-item">
+      <strong>26/03/2024:</strong> Nosso primeiro beijo 😍
+    </div>
+    <div class="timeline-item">
+      <strong>27/05/2024:</strong> Inicio do nosso relacionamento 💑
+    </div>
+    <div class="timeline-item">
+      <strong>27/05/2025:</strong> Completamos 1 ano! 🎉
+    </div>
+  </section>
+
+  <section class="surpresa">
+    <button onclick="document.querySelector('.mensagem').style.display = 'block'">
+      Clique para uma surpresa 💌
+    </button>
+    <div class="mensagem">
+      Você é a melhor parte dos meus dias. Te amo infinitamente! 💘
+    </div>
+  </section>
+
+  <section class="slideshow">
+    <img class="slides" src="IMG-20241216-WA0133.jpg" alt="Foto Especial 1" />
+    <img class="slides" src="IMG-20241216-WA0141.jpg" alt="Foto Especial 2" />
+    <img class="slides" src="IMG-20250410-WA0028(1).jpg" alt="Foto Especial 3" />
+  </section>
+
+  <footer>
+    Feito com 💗 por Juan - 1 ano de amor eterno
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slides");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // troca a cada 3 segundos
+    }
+    showSlides();
+
+    function calcularDiasJuntos() {
+      const dataInicio = new Date('2024-05-27'); // data de início do namoro, ajuste se quiser
+      const hoje = new Date();
+      const diffTime = hoje - dataInicio; // diferença em milissegundos
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)); // converte para dias
+      return diffDays;
+    }
+
+    function atualizarContador() {
+      const dias = calcularDiasJuntos();
+      document.getElementById('diasJuntos').textContent = dias + " dias juntos 💖";
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000 * 60 * 60); // atualiza a cada hora
+  </script>
+</body>
+</html>
